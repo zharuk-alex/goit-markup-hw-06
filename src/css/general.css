@@ -1,0 +1,127 @@
+/* general */
+.container {
+  max-width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.page-title {
+  font-size: 56px;
+  line-height: 1.07;
+}
+
+.section-title {
+  font-size: 36px;
+  line-height: 1.11111;
+  text-transform: capitalize;
+  letter-spacing: 0.02em;
+  margin-bottom: 72px;
+  text-align: center;
+}
+
+.text-title {
+  letter-spacing: 0.02em;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-body {
+  color: var(--text-color);
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+.text-caption {
+  line-height: 1.16667;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+}
+
+.link {
+  font-size: 12px;
+  line-height: 1.33333;
+  letter-spacing: 0.04em;
+  text-decoration: underline;
+  color: var(--primary-color);
+}
+
+.btn {
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+
+  border-radius: 4px;
+  padding: 16px 32px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  border: none;
+}
+
+.btn-light {
+  background-color: var(--light-color);
+  color: var(--primary-color);
+  box-shadow: none;
+  transition: box-shadow linear 0.2s;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--pressed-color);
+  color: var(--white-color);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+}
+
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--indent);
+}
+
+.card-item {
+  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+}
+
+.card-item .card-item-section {
+  text-align: center;
+  padding: 32px 16px;
+}
+
+.card-item .card-item-section .text-title {
+  margin-bottom: 8px;
+}
+
+section {
+  padding: 120px 0;
+}
+
+.logo {
+  font-family: var(--second-family);
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.16667;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary-color);
+}

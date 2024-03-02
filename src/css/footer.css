@@ -1,0 +1,16 @@
+/* footer */
+.footer {
+  background-color: var(--navy-blue);
+  padding-block: 100px;
+}
+.footer .logo {
+  display: block;
+  margin-bottom: 16px;
+}
+.footer .logo > .logo-suffix {
+  color: var(--light-color);
+}
+.footer .footer-description {
+  color: var(--light-color);
+  max-width: 264px;
+}

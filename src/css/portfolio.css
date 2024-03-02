@@ -1,0 +1,25 @@
+/* portfolio */
+.portfolio-section {
+  --items: 3;
+  padding-top: 96px;
+}
+
+.filter-btn-group {
+  display: flex;
+  justify-content: center;
+  gap: var(--indent);
+  margin-bottom: 72px;
+}
+
+.filter-btn-group .btn {
+  display: inline-flex;
+}
+
+.portfolio-section .card-item-section {
+  border: 1px solid var(--accent-color);
+  border-top: none;
+}
+
+.portfolio-section .card-item-section {
+  text-align: start;
+}
