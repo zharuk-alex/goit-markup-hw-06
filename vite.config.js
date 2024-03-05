@@ -2,7 +2,9 @@ import { defineConfig } from "vite";
 import * as glob from 'glob';
 import injectHTML from "vite-plugin-html-inject";
 import FullReload from "vite-plugin-full-reload";
+import imageOptimizerConfig from "./vite-plugin-image-optimizer"
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
+import { viteStaticCopy } from 'vite-plugin-static-copy'
 
 
 export default defineConfig(({ command }) => {
@@ -16,24 +18,14 @@ export default defineConfig(({ command }) => {
     build: {
       cssCodeSplit: true,
       minify: false, 
-      css: {
-        minify: false
-      },
       sourcemap: false,
-
       rollupOptions: {
         emptyOutDir: true,
         input: glob.sync("./src/*.html"),
         output: {
           assetFileNames: (assetInfo) => {
-            
-            // [ 'name', 'source', 'type' ]
             if (assetInfo.name.endsWith('.css')) {
               return 'css/[name][extname]';
-            }
-
-            if (assetInfo.name.endsWith('.js')) {
-              return 'js/[name][extname]';
             }
             
             if (assetInfo.name.endsWith('.jpg') || assetInfo.name.endsWith('.png')) {
@@ -42,8 +34,6 @@ export default defineConfig(({ command }) => {
                 return `images/${folder}/[name][extname]`; 
               }
             }
-
-            
 
             if (assetInfo.name == "icons.svg") {
               return 'images/[name][extname]';
@@ -59,18 +49,19 @@ export default defineConfig(({ command }) => {
     plugins: [
       injectHTML(),
       FullReload("./src/**/**.html"),
-      ViteImageOptimizer({
-        png: {
-          quality: 86,
-        },
-        jpeg: {
-          quality: 86,
-        },
-        jpg: {
-          quality: 86,
-        },
-      }),
-      
+      ViteImageOptimizer(imageOptimizerConfig),
+      viteStaticCopy({
+      targets: [
+          {
+            src: 'js/*.js',
+            dest: 'js'
+          },
+          // {
+          //   src: 'images/*',
+          //   dest: 'images'
+          // },
+        ]
+      })
     ],
   };
 });

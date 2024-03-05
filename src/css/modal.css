@@ -3,26 +3,32 @@ body:has(.modal:not(.is-hidden)) {
 }
 
 .modal {
+  background-color: var(--modal-backdrop-color);
   position: fixed;
   top: 0;
   left: 0;
-  width: 100dvw;
-  height: 100dvh;
+  width: 100vw;
+  height: 100vh;
   z-index: 999;
-  background-color: var(--modal-backdrop-color);
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: backdropFadeIn var(--transition-base) forwards;
 }
 
 .modal.is-hidden {
-  opacity: 0;
-  visibility: hidden;
   pointer-events: none;
+  animation: backdropFadeOut var(--transition-base) forwards 0.2s;
 }
+
+.modal:not(.is-hidden) .modal-container {
+  animation: scaleInFadeIn var(--transition-base) both;
+}
+
 .modal.is-hidden .modal-container {
-  transform: scale(0.6);
+  animation: scaleOutFadeOut var(--transition-base) both;
 }
+
 .modal-container {
   box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 1px 1px 0 rgba(0, 0, 0, 0.14);
@@ -37,8 +43,6 @@ body:has(.modal:not(.is-hidden)) {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transform: scale(1);
-  transition: transform var(--transition-base);
 }
 
 .modal-container .modal-header {
@@ -60,9 +64,18 @@ body:has(.modal:not(.is-hidden)) {
   display: inline-flex;
   margin-left: auto;
   cursor: pointer;
+  transition: background-color var(--transition-base);
 }
 .modal-close-btn .icon {
   width: 8px;
   height: 8px;
   fill: var(--navy-blue);
+  transition: fill var(--transition-base);
+}
+
+.modal-close-btn:hover {
+  background-color: var(--pressed-color);
+}
+.modal-close-btn:hover .icon {
+  fill: var(--white-color);
 }

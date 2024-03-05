@@ -13,6 +13,7 @@
 
 .filter-btn-group .btn {
   display: inline-flex;
+  padding: 12px 24px;
 }
 .portfolio-section .card-set {
   row-gap: 48px;
