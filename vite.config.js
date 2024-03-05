@@ -22,17 +22,17 @@ export default defineConfig(({ command }) => {
       sourcemap: false,
 
       rollupOptions: {
+        emptyOutDir: true,
         input: glob.sync("./src/*.html"),
-        treeshake: false,
         output: {
           assetFileNames: (assetInfo) => {
+            
             // [ 'name', 'source', 'type' ]
             if (assetInfo.name.endsWith('.css')) {
               return 'css/[name][extname]';
             }
 
             if (assetInfo.name.endsWith('.js')) {
-              console.log(assetInfo.name)
               return 'js/[name][extname]';
             }
             
@@ -42,6 +42,9 @@ export default defineConfig(({ command }) => {
                 return `images/${folder}/[name][extname]`; 
               }
             }
+
+            
+
             if (assetInfo.name == "icons.svg") {
               return 'images/[name][extname]';
             }
