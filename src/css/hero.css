@@ -2,7 +2,7 @@
 .hero {
   height: 600px;
   background-image: linear-gradient(var(--grey-color), var(--grey-color)),
-    url(../images/backgrounds/hero.jpg);
+    url(../images/bg/bg_hero.jpg);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
