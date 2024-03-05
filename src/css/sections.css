@@ -8,6 +8,21 @@
   text-align: start;
 }
 
+.section-advantages .card-item-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  margin-bottom: 8px;
+  background-color: var(--light-color);
+  border-radius: 4px;
+}
+
+.section-advantages .card-item-icon .icon {
+  width: 64px;
+  height: 64px;
+}
+
 .section-services {
   --items: 3;
   padding-top: 60px;
@@ -26,4 +41,31 @@
   background-color: var(--white-color);
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+
+.section-team .card-item .text-body {
+  margin-bottom: 8px;
+}
+
+.section-clients {
+  --items: 6;
+}
+.section-clients .card-item-icon {
+  display: block;
+  padding: 16px 32px;
+  border: 1px solid var(--light-slate-color);
+  border-radius: 4px;
+  transition: border var(--transition-base);
+}
+.section-clients .card-item-icon:hover {
+  border: 1px solid var(--pressed-color);
+}
+.section-clients .icon {
+  max-width: 100%;
+  height: 56px;
+  fill: var(--light-slate-color);
+  transition: fill var(--transition-base);
+}
+.section-clients .card-item-icon:hover .icon {
+  fill: var(--pressed-color);
 }

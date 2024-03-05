@@ -1,7 +1,11 @@
 /* hero */
 .hero {
-  background-color: var(--navy-blue);
   height: 600px;
+  background-image: linear-gradient(var(--grey-color), var(--grey-color)),
+    url(../images/background-hero.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
 }
 .hero .container {
   display: flex;

@@ -1,21 +1,24 @@
 :root {
-  --font-family: "Roboto", sans-serif;
-  --second-family: "Raleway", sans-serif;
+  --font-family: 'Roboto', sans-serif;
+  --second-family: 'Raleway', sans-serif;
   --primary-color: #4d5ae5;
   --pressed-color: #404bbf;
   --dark-color: #2e2f42;
+  --modal-backdrop-color: #2e2f4240;
   --success-color: #31d0aa;
   --text-color: #434455;
   --text-subtitle-color: #8e8f99;
+  --light-slate-color: #8e8f99;
   --accent-color: #e7e9fc;
   --light-color: #f4f4fd;
   --navy-blue: #2e2f42;
   --navy-blue-modal: rgba(46, 47, 66, 0.4);
-  --grey-color: #2e2f42;
+  --grey-color: #2e2f4270;
   --dairy-color: #fcfcfc;
   --white-color: #ffffff;
 
   --items: 4;
   --indent: 24px;
-  --section-content-indent: 72px;
+
+  --transition-base: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }

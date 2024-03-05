@@ -14,7 +14,37 @@
 .filter-btn-group .btn {
   display: inline-flex;
 }
+.portfolio-section .card-set {
+  row-gap: 48px;
+}
 
+.portfolio-section .card-image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.portfolio-section .card-item .overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: block;
+  top: 100%;
+  left: 0;
+  color: var(--light-color);
+  background-color: var(--primary-color);
+  padding: 40px 32px;
+  overflow: auto;
+  transition: top var(--transition-base);
+}
+.portfolio-section .card-item {
+  transition: box-shadow var(--transition-base);
+}
+.portfolio-section .card-item:hover {
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+.portfolio-section .card-item:hover .overlay {
+  top: 0;
+}
 .portfolio-section .card-item-section {
   border: 1px solid var(--accent-color);
   border-top: none;

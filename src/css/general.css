@@ -77,13 +77,16 @@
   padding: 16px 32px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   border: none;
+  transition: color var(--transition-base),
+    background-color var(--transition-base);
 }
 
 .btn-light {
   background-color: var(--light-color);
   color: var(--primary-color);
   box-shadow: none;
-  transition: box-shadow linear 0.2s;
+  transition: box-shadow var(--transition-base), color var(--transition-base),
+    background-color var(--transition-base);
 }
 
 .btn:hover,
@@ -124,4 +127,26 @@ section {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--primary-color);
+}
+
+.social-icons-set {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  justify-content: space-between;
+}
+.social-icons-set .icon-link {
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  display: inline-flex;
+  padding: 12px;
+  transition: background-color var(--transition-base);
+}
+.social-icons-set .icon-link:hover {
+  background-color: var(--pressed-color);
+}
+.social-icons-set .icon {
+  width: 16px;
+  height: 16px;
+  fill: #ffffff;
 }
