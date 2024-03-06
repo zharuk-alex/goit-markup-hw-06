@@ -1,5 +1,6 @@
 @import './vars.css';
 @import './reset.css';
+@import './keyframes.css';
 @import './general.css';
 @import './header.css';
 @import './hero.css';
@@ -7,4 +8,3 @@
 @import './modal.css';
 @import './portfolio.css';
 @import './footer.css';
-@import './keyframes.css';

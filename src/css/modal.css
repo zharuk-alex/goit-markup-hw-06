@@ -9,24 +9,28 @@ body:has(.modal:not(.is-hidden)) {
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 999;
-  display: flex;
   align-items: center;
   justify-content: center;
-  animation: backdropFadeIn var(--transition-base) forwards;
+  display: flex;
+}
+
+.modal:not(.is-hidden) {
+  opacity: 1;
+  transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal.is-hidden {
+  opacity: 0;
+  transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   pointer-events: none;
-  animation: backdropFadeOut var(--transition-base) forwards 0.2s;
 }
 
 .modal:not(.is-hidden) .modal-container {
-  animation: scaleInFadeIn var(--transition-base) both;
+  animation: scaleInFadeIn var(--transition-base) backwards;
 }
 
 .modal.is-hidden .modal-container {
-  animation: scaleOutFadeOut var(--transition-base) both;
+  animation: scaleOutFadeOut var(--transition-base) backwards;
 }
 
 .modal-container {
@@ -36,8 +40,6 @@ body:has(.modal:not(.is-hidden)) {
   width: 408px;
   max-height: 100dvh;
   height: 70dvh;
-  display: flex;
-  flex-direction: column;
   border-radius: 4px;
 
   overflow: hidden;
