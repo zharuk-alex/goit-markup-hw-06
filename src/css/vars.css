@@ -4,7 +4,7 @@
   --primary-color: #4d5ae5;
   --pressed-color: #404bbf;
   --dark-color: #2e2f42;
-  --modal-backdrop-color: #2e2f4240;
+  --modal-backdrop-color: rgba(46, 47, 66, 0.25);
   --success-color: #31d0aa;
   --text-color: #434455;
   --text-subtitle-color: #8e8f99;

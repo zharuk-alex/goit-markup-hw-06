@@ -3,7 +3,7 @@ body:has(.modal:not(.is-hidden)) {
 }
 
 .modal {
-  background-color: var(--modal-backdrop-color);
+  /* background-color: var(--modal-backdrop-color); */
   position: fixed;
   top: 0;
   left: 0;
@@ -16,13 +16,16 @@ body:has(.modal:not(.is-hidden)) {
 
 .modal:not(.is-hidden) {
   opacity: 1;
-  transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: rgba(46, 47, 66, 0.25);
+  visibility: visible;
+  transition: opacity var(--transition-base);
 }
 
 .modal.is-hidden {
   opacity: 0;
-  transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  visibility: hidden;
   pointer-events: none;
+  transition: opacity, visibility var(--transition-base), 0.25s ease-in-out 0s;
 }
 
 .modal:not(.is-hidden) .modal-container {
@@ -30,7 +33,7 @@ body:has(.modal:not(.is-hidden)) {
 }
 
 .modal.is-hidden .modal-container {
-  animation: scaleOutFadeOut var(--transition-base) backwards;
+  animation: scaleOutFadeOut var(--transition-base) forwards;
 }
 
 .modal-container {
