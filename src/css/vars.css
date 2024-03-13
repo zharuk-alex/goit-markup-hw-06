@@ -1,9 +1,10 @@
 :root {
   --font-family: 'Roboto', sans-serif;
   --second-family: 'Raleway', sans-serif;
+  --font-caption-size: 12px;
+
   --primary-color: #4d5ae5;
   --pressed-color: #404bbf;
-  --dark-color: #2e2f42;
   --modal-backdrop-color: rgba(46, 47, 66, 0.25);
   --success-color: #31d0aa;
   --text-color: #434455;
@@ -13,12 +14,13 @@
   --light-color: #f4f4fd;
   --navy-blue: #2e2f42;
   --navy-blue-modal: rgba(46, 47, 66, 0.4);
+  --checkbox-empty-color: rgba(46, 47, 66, 0.4);
   --grey-color: rgba(46, 47, 66, 0.7);
   --dairy-color: #fcfcfc;
   --white-color: #ffffff;
 
   --items: 4;
   --indent: 24px;
-
+  --border-radius: 4px;
   --transition-base: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }

@@ -2,9 +2,10 @@
 @import './reset.css';
 @import './keyframes.css';
 @import './general.css';
+@import './modal.css';
+@import './form.css';
 @import './header.css';
 @import './hero.css';
 @import './sections.css';
-@import './modal.css';
 @import './portfolio.css';
 @import './footer.css';

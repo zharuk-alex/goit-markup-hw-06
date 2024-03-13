@@ -43,3 +43,26 @@ a {
   text-decoration: none;
   font-style: normal;
 }
+
+/* input,
+textarea,
+button {
+  font-family: inherit;
+  line-height: inherit;
+} */
+
+input,
+textarea {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16667;
+  letter-spacing: 0.04em;
+}
+
+fieldset {
+  outline: none;
+  border: none;
+  padding: 0px;
+  margin: 0;
+}

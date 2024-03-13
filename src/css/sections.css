@@ -15,7 +15,7 @@
   padding: 24px;
   margin-bottom: 8px;
   background-color: var(--light-color);
-  border-radius: 4px;
+  border-radius: var(--border-radius);
 }
 
 .section-advantages .card-item-icon .icon {
@@ -37,7 +37,7 @@
 }
 
 .section-team .card-item {
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
   background-color: var(--white-color);
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
@@ -54,7 +54,7 @@
   display: block;
   padding: 16px 32px;
   border: 1px solid var(--light-slate-color);
-  border-radius: 4px;
+  border-radius: var(--border-radius);
   transition: border var(--transition-base);
 }
 .section-clients .card-item-icon:hover {

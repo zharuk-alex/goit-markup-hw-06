@@ -13,5 +13,22 @@
       <p class="text-body">Social media</p>
       <load src="/partials/social-icons-set.html" />
     </div>
+    <div class="footer-subscribe">
+      <p class="text-body">Subscribe</p>
+      <form name="form_subscribe" onsubmit="event.preventDefault()">
+        <input
+          class="form-input input-outlined"
+          type="email"
+          name="email"
+          placeholder="Email"
+        />
+        <button type="submit" class="btn">
+          Subscribe
+          <svg class="icon">
+            <use href="./images/icons.svg#icon-send"></use>
+          </svg>
+        </button>
+      </form>
+    </div>
   </div>
 </footer>

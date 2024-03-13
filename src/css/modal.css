@@ -3,7 +3,6 @@ body:has(.modal:not(.is-hidden)) {
 }
 
 .modal {
-  /* background-color: var(--modal-backdrop-color); */
   position: fixed;
   top: 0;
   left: 0;
@@ -41,9 +40,8 @@ body:has(.modal:not(.is-hidden)) {
     0 1px 1px 0 rgba(0, 0, 0, 0.14);
   background-color: var(--dairy-color);
   width: 408px;
-  max-height: 100dvh;
-  height: 70dvh;
-  border-radius: 4px;
+  max-height: 80dvh;
+  border-radius: var(--border-radius);
 
   overflow: hidden;
   display: flex;
@@ -51,16 +49,17 @@ body:has(.modal:not(.is-hidden)) {
 }
 
 .modal-container .modal-header {
-  padding: 32px 32px 16px 32px;
+  padding: 24px 24px 12px 24px;
   display: flex;
-  flex-grow: 1;
 }
+
 .modal-container .modal-body {
-  padding: 0 16px 16px 16px;
+  padding: 12px 24px;
   display: flex;
   flex-direction: column;
   overflow: hidden auto;
 }
+
 .modal-close-btn {
   border-radius: 50%;
   border: 1px solid var(--accent-color);
@@ -71,6 +70,7 @@ body:has(.modal:not(.is-hidden)) {
   cursor: pointer;
   transition: background-color var(--transition-base);
 }
+
 .modal-close-btn .icon {
   width: 8px;
   height: 8px;
@@ -81,6 +81,7 @@ body:has(.modal:not(.is-hidden)) {
 .modal-close-btn:hover {
   background-color: var(--pressed-color);
 }
+
 .modal-close-btn:hover .icon {
   fill: var(--white-color);
 }

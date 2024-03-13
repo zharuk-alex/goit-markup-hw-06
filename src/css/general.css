@@ -51,12 +51,12 @@
 
 .text-caption {
   line-height: 1.16667;
-  font-size: 12px;
+  font-size: var(--font-caption-size);
   letter-spacing: 0.04em;
 }
 
 .link {
-  font-size: 12px;
+  font-size: var(--font-caption-size);
   line-height: 1.33333;
   letter-spacing: 0.04em;
   text-decoration: underline;
@@ -72,13 +72,19 @@
   cursor: pointer;
   background-color: var(--primary-color);
   color: var(--white-color);
-
-  border-radius: 4px;
+  display: inline-flex;
+  gap: 16px;
+  border-radius: var(--border-radius);
   padding: 16px 32px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   border: none;
   transition: color var(--transition-base),
     background-color var(--transition-base);
+}
+
+.btn .icon {
+  fill: var(--white-color);
+  height: 24px;
 }
 
 .btn-light {
@@ -135,6 +141,7 @@ section {
   column-gap: 24px;
   justify-content: space-between;
 }
+
 .social-icons-set .icon-link {
   background-color: var(--primary-color);
   border-radius: 50%;
@@ -142,9 +149,11 @@ section {
   padding: 12px;
   transition: background-color var(--transition-base);
 }
+
 .social-icons-set .icon-link:hover {
   background-color: var(--pressed-color);
 }
+
 .social-icons-set .icon {
   width: 16px;
   height: 16px;
