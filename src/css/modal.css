@@ -24,7 +24,10 @@ body:has(.modal:not(.is-hidden)) {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity, visibility var(--transition-base), 0.25s ease-in-out 0s;
+  transition:
+    opacity,
+    visibility var(--transition-base),
+    0.25s ease-in-out 0s;
 }
 
 .modal:not(.is-hidden) .modal-container {
@@ -36,11 +39,13 @@ body:has(.modal:not(.is-hidden)) {
 }
 
 .modal-container {
-  box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
+  box-shadow:
+    0 2px 1px 0 rgba(0, 0, 0, 0.2),
+    0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 1px 1px 0 rgba(0, 0, 0, 0.14);
   background-color: var(--dairy-color);
   width: 408px;
-  max-height: 80dvh;
+  max-height: 90dvh;
   border-radius: var(--border-radius);
 
   overflow: hidden;
@@ -58,30 +63,4 @@ body:has(.modal:not(.is-hidden)) {
   display: flex;
   flex-direction: column;
   overflow: hidden auto;
-}
-
-.modal-close-btn {
-  border-radius: 50%;
-  border: 1px solid var(--accent-color);
-  background-color: #e7e9fc10;
-  padding: 8px;
-  display: inline-flex;
-  margin-left: auto;
-  cursor: pointer;
-  transition: background-color var(--transition-base);
-}
-
-.modal-close-btn .icon {
-  width: 8px;
-  height: 8px;
-  fill: var(--navy-blue);
-  transition: fill var(--transition-base);
-}
-
-.modal-close-btn:hover {
-  background-color: var(--pressed-color);
-}
-
-.modal-close-btn:hover .icon {
-  fill: var(--white-color);
 }

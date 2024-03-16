@@ -3,36 +3,30 @@
   color: var(--light-color);
   background-color: var(--navy-blue);
   padding-block: 100px;
+  text-align: center;
 }
 
 .footer .container {
   display: flex;
-  column-gap: 80px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 586px;
+  gap: var(--block-indent) var(--inline-indent);
 }
 
-.footer .footer-description,
-.footer .footer-social,
-.footer .footer-subscribe {
+.footer .container > div {
   display: flex;
   flex-direction: column;
-  row-gap: 16px;
-}
-
-.footer .logo {
-  display: block;
-}
-
-.footer .logo>.logo-suffix {
-  color: var(--light-color);
+  align-items: center;
+  gap: 8px;
 }
 
 .footer .text-body {
   color: inherit;
 }
 
-.footer .footer-description {
+.footer .footer-description .text-body {
   max-width: 264px;
-  margin-right: 40px;
 }
 
 .footer .footer-social .text-body,
@@ -40,7 +34,7 @@
   font-weight: 500;
 }
 
-.footer .social-icons-set {
+.footer .footer-social .social-icons-set {
   column-gap: 16px;
   flex-wrap: nowrap;
 }
@@ -58,23 +52,22 @@
   height: 24px;
 }
 
-.footer .footer-subscribe {
-  flex-grow: 1;
-}
-
 .footer form {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 24px;
+  gap: 16px;
+  width: 100%;
 }
 
 .footer .form-input {
-  flex-grow: 1;
-  max-width: 264px;
-  padding: 8px 16px;
+  min-width: 264px;
+  width: 100%;
   height: 100%;
-
+  max-width: 400px;
+  padding: 8px 16px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 }
 
 .footer .form-input,
@@ -82,7 +75,41 @@
   color: var(--white-color);
 }
 
-.footer button[type="submit"] {
+.footer button[type='submit'] {
   max-width: 165px;
   padding: 8px 24px;
+}
+
+.footer .logo {
+  display: block;
+}
+
+.footer .logo > .logo-suffix {
+  color: var(--light-color);
+}
+
+@media (min-width: 768px) {
+  .footer {
+    text-align: start;
+  }
+
+  .footer .container {
+    flex-direction: row;
+  }
+
+  .footer .container > div {
+    align-items: flex-start;
+  }
+
+  .footer form {
+    flex-direction: row;
+    gap: 24px;
+  }
+}
+
+@media (min-width: 1158px) {
+  .footer .container {
+    justify-content: space-between;
+    max-width: calc(var(--md-size) - 32px * 2);
+  }
 }

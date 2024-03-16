@@ -5,12 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "format": "prettier --write \"dist/**/*.{html,css}\"",
+    "build": "vite build && npm run format",
     "preview": "vite preview"
   },
   "devDependencies": {
     "glob": "^10.3.10",
     "imagemin": "^8.0.1",
+    "prettier": "3.2.5",
     "rollup-plugin-copy": "^3.5.0",
     "sharp": "^0.33.2",
     "svgo": "^3.2.0",

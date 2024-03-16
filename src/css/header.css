@@ -1,9 +1,15 @@
 /* header */
 .header {
+  position: sticky;
+  top: 0;
+  left: 0;
   height: 72px;
+  background-color: var(--white-color);
   border-bottom: 1px solid var(--accent-color);
-  box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
-    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
+  box-shadow:
+    0 1px 6px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16),
+    0 2px 1px 0 rgba(46, 47, 66, 0.08);
 }
 
 .header .container {
@@ -12,15 +18,16 @@
   justify-content: space-between;
 }
 
-.header-nav .logo {
-  margin-right: 76px;
+.header-nav {
   display: flex;
-  align-items: center;
+  flex-grow: 1;
+  gap: 120px;
+  justify-content: space-between;
 }
 
-.header-nav,
-.header address {
+.header-nav .logo {
   display: flex;
+  align-items: center;
 }
 
 .header .logo > .logo-suffix {
@@ -28,11 +35,20 @@
 }
 
 .header .nav-link-group {
-  display: flex;
+  display: none;
   align-items: center;
+  flex-grow: 1;
+  gap: 40px;
 }
+
+.header address .nav-link-group {
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  gap: 12px;
+}
+
 .header .nav-link-item {
-  margin-right: 40px;
   height: 100%;
   display: flex;
   align-items: center;
@@ -53,9 +69,9 @@
   position: relative;
 }
 
-.header .nav-link:hover,
-.header .address-link:hover,
-.header .nav-link.active {
+.nav-link:hover,
+.address-link:hover,
+.nav-link.active {
   color: var(--primary-color);
 }
 
@@ -68,4 +84,49 @@
   height: 4px;
   width: 100%;
   border-radius: 2px;
+}
+
+.header .menu-toggle {
+  border: none;
+  background: none;
+}
+
+.header .menu-toggle .icon {
+  stroke: black;
+  width: 32px;
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  .header {
+    position: relative;
+  }
+
+  #mobile-menu {
+    display: none;
+  }
+
+  .header .nav-link-group {
+    display: flex;
+  }
+  .header address .nav-link-item {
+    height: auto;
+  }
+  .header .menu-toggle {
+    display: none;
+  }
+  .header .address-link {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 1158px) {
+  .header address .nav-link-group {
+    flex-direction: row;
+    gap: 40px;
+  }
+  .header .nav-link,
+  .header .address-link {
+    font-size: 16px;
+  }
 }

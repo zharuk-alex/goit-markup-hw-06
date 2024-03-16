@@ -19,8 +19,13 @@
   --dairy-color: #fcfcfc;
   --white-color: #ffffff;
 
-  --items: 4;
-  --indent: 24px;
+  --items: 1;
+  --inline-indent: 24px;
+  --block-indent: 72px;
   --border-radius: 4px;
   --transition-base: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
+  --xs-size: 428px;
+  --sm-size: 768px;
+  --md-size: 1158px;
 }

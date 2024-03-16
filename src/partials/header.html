@@ -4,46 +4,22 @@
       <a class="logo" href="./index.html">
         WEB<span class="logo-suffix">STUDIO</span>
       </a>
-      <ul class="nav-link-group">
-        <li class="nav-link-item">
-          <a class="nav-link active" data-href="index.html" href="./index.html">
-            Studio
-          </a>
-        </li>
-        <li class="nav-link-item">
-          <a
-            class="nav-link"
-            data-href="portfolio.html"
-            href="./portfolio.html"
-          >
-            Portfolio
-          </a>
-        </li>
-        <li class="nav-link-item">
-          <a
-            class="nav-link"
-            data-href="contacts.html"
-            href="javascript:void(0)"
-          >
-            Contacts
-          </a>
-        </li>
-      </ul>
+      <load src="/partials/nav-link-group.html" />
+
+      <button
+        role="button"
+        class="menu-toggle js-open-menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg class="icon">
+          <use href="./images/icons.svg#icon-burger"></use>
+        </svg>
+      </button>
     </nav>
 
     <address>
-      <ul class="nav-link-group">
-        <li class="nav-link-item">
-          <a class="address-link" href="mailto:info@devstudio.com">
-            info@devstudio.com
-          </a>
-        </li>
-        <li class="nav-link-item">
-          <a class="address-link" href="tel:+110001111111">
-            +11 (000) 111-11-11
-          </a>
-        </li>
-      </ul>
+      <load src="/partials/nav-link-address.html" />
     </address>
   </div>
 </header>

@@ -1,7 +1,16 @@
 <li class="card-item">
   <a href="{=$href}">
     <div class="card-image-wrapper">
-      <img src="./images/portfolio/{=$img}.jpg" alt="{=$alt}" class="img" />
+      <img
+        loading="lazy"
+        src="./images/portfolio/{=$image}.jpg"
+        srcset="
+          ./images/portfolio/{=$image}.jpg    1x,
+          ./images/portfolio/{=$image}@2x.jpg 2x
+        "
+        alt="{=$alt}"
+        class="img"
+      />
       <p class="overlay text-body">
         14 Stylish and User-Friendly App Design Concepts · Task Manager App ·
         Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App

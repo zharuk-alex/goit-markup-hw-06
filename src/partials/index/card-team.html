@@ -1,5 +1,11 @@
 <li class="card-item">
-  <img class="img" src="./images/team/{=$img}.jpg" alt="{=$alt}" />
+  <img
+    loading="lazy"
+    class="img"
+    src="./images/team/{=$image}.jpg"
+    srcset="./images/team/{=$image}.jpg 1x, ./images/team/{=$image}@2x.jpg 2x"
+    alt="{=$alt}"
+  />
   <div class="card-item-section">
     <h3 class="text-title">{=$title}</h3>
     <p class="text-body">{=$subtitle}</p>
