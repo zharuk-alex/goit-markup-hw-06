@@ -9,6 +9,12 @@
   padding: 112px 0;
 }
 
+@media (max-width: 767px) and (min-resolution: 192dpi) {
+  .hero {
+    --bg-url: url(../images/bg/bg_hero-xs@2x.jpg);
+  }
+}
+
 .hero .container {
   display: flex;
   flex-direction: column;
