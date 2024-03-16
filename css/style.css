@@ -542,7 +542,7 @@ input[type='checkbox']:checked {
 .header .menu-toggle .icon {
   stroke: black;
   width: 32px;
-  height: 100%;
+  height: 32px;
 }
 @media (min-width: 768px) {
   .header {
