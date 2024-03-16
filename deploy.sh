@@ -11,5 +11,5 @@ git init
 git add -A
 git commit -m 'deploy'
 
-git push -f https://github.com/zharuk-alex/goit-markup-hw-05.git main
+git push -f https://github.com/zharuk-alex/goit-markup-hw-06.git main
 cd -

@@ -64,7 +64,8 @@
 
 #mobile-menu .social-icons-set {
   margin-top: 8px;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 56px;
 }
 #mobile-menu .social-icons-set .icon-link {
   padding: 8px;
