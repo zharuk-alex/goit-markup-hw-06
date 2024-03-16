@@ -11,6 +11,7 @@ body:has(.modal:not(.is-hidden)) {
   align-items: center;
   justify-content: center;
   display: flex;
+  z-index: 998;
 }
 
 .modal:not(.is-hidden) {
