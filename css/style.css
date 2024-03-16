@@ -469,6 +469,7 @@ input[type='checkbox']:checked {
     0 1px 6px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16),
     0 2px 1px 0 rgba(46, 47, 66, 0.08);
+  z-index: 2;
 }
 .header .container {
   height: 100%;
@@ -631,7 +632,8 @@ input[type='checkbox']:checked {
 }
 #mobile-menu .social-icons-set {
   margin-top: 8px;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 56px;
 }
 #mobile-menu .social-icons-set .icon-link {
   padding: 8px;
