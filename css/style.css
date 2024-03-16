@@ -304,6 +304,7 @@ body:has(.modal:not(.is-hidden)) {
   align-items: center;
   justify-content: center;
   display: flex;
+  z-index: 998;
 }
 .modal:not(.is-hidden) {
   opacity: 1;
@@ -371,6 +372,7 @@ body:has(.modal:not(.is-hidden)) {
   display: flex;
   flex-direction: row;
   align-items: center;
+  flex-wrap: wrap;
   gap: 8px;
 }
 .form-input {
@@ -479,7 +481,6 @@ input[type='checkbox']:checked {
 .header-nav {
   display: flex;
   flex-grow: 1;
-  gap: 120px;
   justify-content: space-between;
 }
 .header-nav .logo {
@@ -547,7 +548,9 @@ input[type='checkbox']:checked {
   .header {
     position: relative;
   }
-
+  .header-nav {
+    gap: 120px;
+  }
   #mobile-menu {
     display: none;
   }
