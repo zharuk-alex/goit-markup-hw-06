@@ -110,6 +110,6 @@
 @media (min-width: 1158px) {
   .footer .container {
     justify-content: space-between;
-    max-width: calc(var(--md-size) - 32px * 2);
+    max-width: calc(var(--md-size) - 16px * 2);
   }
 }
