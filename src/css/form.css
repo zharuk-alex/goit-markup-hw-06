@@ -1,8 +1,7 @@
-.form-legend {
-  text-align: center;
+.form-legend.text-title {
   margin-bottom: 16px;
   font-size: 16px;
-  font-weight: 500;
+  line-height: 1.5;
 }
 
 .form-label {
@@ -28,7 +27,7 @@
 .form-input {
   width: 100%;
   padding: 12px 16px;
-  font-size: 18px;
+  font-size: 12px;
   border-radius: var(--border-radius);
   border: 1px solid var(--navy-blue-modal);
   transition: border var(--transition-base);
@@ -111,16 +110,20 @@ input[type='checkbox']:checked {
   text-decoration-skip-ink: none;
 }
 
-.form-registration fieldset {
-  margin-bottom: 8px;
-}
-
 .form-registration button[type='submit'] {
   display: block;
   width: 169px;
-  margin: 8px auto;
+  margin: 0 auto;
 }
 
 .form-registration > .form-label {
-  margin-bottom: 16px;
+  margin-top: 8px;
+  margin-bottom: 24px;
+}
+.form-registration textarea {
+  height: 120px;
+}
+
+.form-registration textarea::placeholder {
+  font-size: 12px;
 }

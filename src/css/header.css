@@ -123,6 +123,9 @@
 }
 
 @media (min-width: 1158px) {
+  .header-nav {
+    gap: 76px;
+  }
   .header address .nav-link-group {
     flex-direction: row;
     gap: 40px;

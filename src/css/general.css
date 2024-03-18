@@ -3,7 +3,7 @@
   --current-breakpoint: var(--xs-size);
   padding: 0 16px;
   margin: 0 auto;
-  max-width: calc(var(--current-breakpoint) - 16px * 2);
+  max-width: var(--current-breakpoint);
 }
 
 @media (min-width: 768px) {

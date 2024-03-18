@@ -55,12 +55,13 @@ body:has(.modal:not(.is-hidden)) {
 }
 
 .modal-container .modal-header {
-  padding: 24px 24px 12px 24px;
+  padding: 24px;
+  padding-bottom: 0px;
   display: flex;
 }
 
 .modal-container .modal-body {
-  padding: 12px 24px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
   overflow: hidden auto;

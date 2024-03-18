@@ -8,9 +8,8 @@
 
 .footer .container {
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
-  max-width: 586px;
+  justify-content: center;
   gap: var(--block-indent) var(--inline-indent);
 }
 
@@ -18,7 +17,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  flex-basis: 100%;
+  gap: 16px;
 }
 
 .footer .text-body {
@@ -73,6 +73,7 @@
 .footer .form-input,
 .footer .form-input::placeholder {
   color: var(--white-color);
+  font-size: 12px;
 }
 
 .footer button[type='submit'] {
@@ -94,11 +95,13 @@
   }
 
   .footer .container {
-    flex-direction: row;
+    --sm-size: 586px;
+    justify-content: flex-start;
   }
 
   .footer .container > div {
     align-items: flex-start;
+    flex-basis: auto;
   }
 
   .footer form {
@@ -110,6 +113,5 @@
 @media (min-width: 1158px) {
   .footer .container {
     justify-content: space-between;
-    max-width: calc(var(--md-size) - 16px * 2);
   }
 }

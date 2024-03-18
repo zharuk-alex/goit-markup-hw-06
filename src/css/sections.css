@@ -43,7 +43,7 @@
     0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16),
     0 1px 6px 0 rgba(46, 47, 66, 0.08);
-  max-width: 264px;
+  max-width: fit-content;
 }
 
 .section-team .text-body {
@@ -121,9 +121,14 @@
 
   .section-advantages .text-title {
     text-align: start;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.11111;
+    letter-spacing: 0.02em;
   }
   .section-advantages .text-body {
-    font-weight: normal;
+    font-weight: 400;
+    letter-spacing: 0.019em;
   }
   .section-advantages .card-item-icon {
     display: flex;

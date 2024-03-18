@@ -67,10 +67,23 @@
   justify-content: flex-start;
   gap: 56px;
 }
+
 #mobile-menu .social-icons-set .icon-link {
   padding: 8px;
 }
+
 #mobile-menu .social-icons-set .icon-link .icon {
   width: 24px;
   height: 24px;
+}
+
+@media (max-width: 428px) {
+  #mobile-menu address .nav-link-item:nth-child(2) .address-link {
+    font-size: 20px;
+  }
+
+  #mobile-menu .social-icons-set {
+    justify-content: space-between;
+    column-gap: 24px;
+  }
 }
